@@ -16,10 +16,10 @@
             <button @click="addTask()">AGGIUNGI TASK</button>
 
             <ul>
-                <li v-for="(task, i) in taskList">
-                    {{task}}
+                <li v-for="(task, i) in taskList" :class="styleDone(i)">
+                    {{task.text}}
                     <button @click="changeTask(i)">CAMBIA STATO</button>
-                    <button @click="removeTask(i)">RIMUOVI</button>
+                    <button @click="removeTask(i)">X</button>
                 </li>
             </ul> 
         </div>

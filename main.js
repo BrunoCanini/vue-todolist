@@ -5,9 +5,17 @@ createApp({
       return {
         newTask : "",
         taskList : [
-            { text : "lavare la macchina", done: false },
-            { text :"tagliare l erba", done: false },
-            { text :"montare mobile", done: false }
+            { 
+                text : "lavare la macchina", 
+                done: false 
+            },
+            { 
+                text :"tagliare l erba", 
+                done: false },
+            { 
+                text :"montare mobile",
+                done: false 
+            }
         ]
       }
     },
@@ -27,6 +35,17 @@ createApp({
         },
         changeTask(i){
             this.taskList[i].done= !this.taskList[i].done;
+        },
+        styleDone(i){
+            let result;
+
+            if( this.taskList[i].done === true){
+                result = "strikeout"
+            }else{
+                result = ""
+            }
+
+            return result;
         }
       },
     mounted() {

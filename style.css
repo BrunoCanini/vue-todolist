@@ -7,3 +7,7 @@
 /* .container{
     text-align: center;
 } */
+
+.strikeout{
+    text-decoration: line-through;
+}
